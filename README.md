@@ -1,3 +1,4 @@
+[Videocaptura de pantalla_20260520_112234.webm](https://github.com/user-attachments/assets/79b25e9b-af1e-4c0a-896d-4892e1d84aff)
 # Cachy-Dots 🚀
 
 Mi personalización personal para **CachyOS** con Hyprland. Este script automatiza la instalación de paquetes y la aplicación de mis dotfiles.
