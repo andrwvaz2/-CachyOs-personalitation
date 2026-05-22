@@ -1,0 +1,114 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 40,
+    "margin-top": 8,
+    "margin-left": 10,
+    "margin-right": 10,
+    "spacing": 4,
+    "modules-left": ["custom/launcher", "hyprland/workspaces", "custom/cava", "mpris"],
+    "modules-center": ["clock"],
+    "modules-right": ["pulseaudio", "network", "bluetooth", "cpu", "memory", "battery", "tray", "custom/power"],
+
+    "custom/cava": {
+        "exec": "~/.config/waybar/scripts/waybar-cava.sh",
+        "format": "{}"
+    },
+
+    "mpris": {
+        "format": "{player_icon} {title} - {artist}",
+        "format-paused": "{status_icon} <i>{title}</i>",
+        "player-icons": {
+            "default": "󰎆",
+            "spotify": "",
+            "firefox": "󰈹"
+        },
+        "status-icons": {
+            "paused": "󰏤"
+        },
+        "max-length": 30
+    },
+
+    "battery": {
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{icon} {capacity}%",
+        "format-charging": "󰂄 {capacity}%",
+        "format-plugged": " {capacity}%",
+        "format-alt": "{icon} {time}",
+        "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
+    },
+
+    "pulseaudio": {
+        "format": "{icon} {volume}%",
+        "format-bluetooth": "{icon} {volume}%",
+        "format-muted": "  Muted",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", "", ""]
+        },
+        "scroll-step": 5,
+        "on-click": "pavucontrol",
+        "tooltip": false
+    },
+
+    "tray": {
+        "icon-size": 18,
+        "spacing": 10
+    },
+
+    "hyprland/workspaces": {
+        "format": "{name}",
+        "on-click": "activate"
+    },
+
+    "hyprland/window": {
+        "format": " {title}",
+        "max-length": 40
+    },
+
+    "cpu": { "format": "  {usage}%", "interval": 2 },
+    
+    "memory": { "format": "󰍛 {percentage}%" },
+    
+    "temperature": { "format": " {temperatureC}°C" },
+
+    "clock": {
+        "format": "{:%H:%M:%S}",
+        "interval": 1,
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+    },
+
+    "network": { 
+        "format-wifi": " {essid}",
+        "format-ethernet": "󰈀 {ifname}",
+        "format-disconnected": "󰖪 Off",
+        "tooltip-format": "{ifname} via {gwaddr}",
+        "on-click": "systemsettings kcm_networkmanagement"
+    },
+
+    "bluetooth": {
+        "format": "󰂯",
+        "format-disabled": "󰂲",
+        "format-connected": "󰂱",
+        "on-click": "systemsettings kcm_bluetooth"
+    },
+
+    "custom/launcher": {
+        "format": "󰈸",
+        "on-click": "wofi --show drun"
+    },
+
+    "custom/power": {
+        "format": "⏻",
+        "on-click": "qdbus6 org.kde.LogoutPrompt /LogoutPrompt org.kde.LogoutPrompt.promptAll",
+        "tooltip": false
+    }
+}

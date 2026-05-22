@@ -1,0 +1,23 @@
+# Repositorios Oficiales CachyOS / Arch
+hyprland
+swww
+waybar
+wofi
+dolphin
+fish
+fastfetch
+btop
+cava
+micro
+kitty
+ttf-font-awesome
+otf-font-awesome
+pavucontrol
+qt5-wayland
+qt6-wayland
+
+# AUR (usando paru)
+ghostty
+visual-studio-code-bin
+brave-bin
+ttf-meslo-nerd-font-powerlevel10k

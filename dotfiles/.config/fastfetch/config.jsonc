@@ -1,0 +1,62 @@
+{
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/master/doc/json_schema.json",
+  "logo": {
+    "source": "/home/andrw/.config/fastfetch/logo.txt",
+    "padding": {
+      "top": 2,
+      "left": 2
+    }
+  },
+  "display": {
+    "separator": "  ➜  ",
+    "color": {
+        "keys": "cyan"
+    }
+  },
+  "modules": [
+    "break",
+    {
+        "type": "title",
+        "key": "   user",
+        "format": "{1}@{2}"
+    },
+    {
+        "type": "os",
+        "key": "  󰅐 os age",
+        "format": "{3}" 
+    },
+    {
+        "type": "os",
+        "key": "   distro"
+    },
+    {
+        "type": "kernel",
+        "key": "   kernel"
+    },
+    {
+        "type": "wm",
+        "key": "   wm"
+    },
+    {
+        "type": "shell",
+        "key": "  󱆃 shell"
+    },
+    {
+        "type": "terminal",
+        "key": "   term"
+    },
+    {
+        "type": "cpu",
+        "key": "   cpu"
+    },
+    {
+        "type": "memory",
+        "key": "  󰍛 memory"
+    },
+    "break",
+    {
+        "type": "colors",
+        "symbol": "rect"
+    }
+  ]
+}
